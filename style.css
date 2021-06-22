@@ -193,7 +193,7 @@ img {
 
 /* About Me Section */
 
-.about-me {
+.about-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
