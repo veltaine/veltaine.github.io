@@ -196,7 +196,7 @@ img {
 .projects-section {
   text-align: center;
   padding: 31rem 2rem;
-  background: var(--main-blue);
+  background-color: #a1a1a1;
 }
 
 .projects-section-header {
