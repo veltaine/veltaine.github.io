@@ -1,10 +1,3 @@
-/* Custom properties/variables  */
-:root {
-  --main-white: #f0f0f0;
-  --main-red: #be3144;
-  --main-blue: #45567d;
-  --main-gray: #303841;
-}
 
 /* Base reset */
 * {
@@ -30,39 +23,29 @@ html {
   scroll-behavior: smooth;
 }
 
-/* A few media query to set some font sizes at different screen sizes.
- * This helps automate a bit of responsiveness.
- * The trick is to use the rem unit for size values, margin and padding.
- * Because rem is relative to the document font size
- * when we scale up or down the font size on the document
- * it will affect all properties using rem units for the values.
-*/
-
-/* I am using the em unit for breakpoints
- * The calculation is the following
- * screen size divided by browser base font size
- * As an example: a breakpoint at 980px
- * 980px / 16px = 61.25em
-*/
-
-/* 1200px / 16px = 75em */
-@media (max-width: 75em) {
+@media (max-width: 1200px) {
   html {
     font-size: 60%;
   }
 }
 
-/* 980px / 16px = 61.25em */
-@media (max-width: 61.25em) {
+
+@media (max-width: 980px) {
   html {
     font-size: 58%;
   }
 }
 
-/* 460px / 16px = 28.75em */
-@media (max-width: 28.75em) {
+
+@media (max-width: 460px) {
   html {
-    font-size: 55%;
+    font-size: 40%;
+  }
+  #intro-name > h1 {
+    font-size: 200%;
+  }
+  .selfie {
+    width: auto;
   }
 }
 
@@ -70,10 +53,24 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.8rem; /* 18px */
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.4;
-  color: var(--main-white);
+  color: #ffffff;
+}
+
+@media (max-width: 800px) {
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #ffffff;
+  }
+  p {
+    text-align: left;
+  }
+  
 }
 
 h1,
@@ -97,7 +94,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--main-white);
+  color: #ffffff;
 }
 
 img {
@@ -130,7 +127,8 @@ img {
 }
 
 
-@media (max-width: 28.75em) {
+
+@media(max-width: 28.75em) {
   .nav {
     justify-content: center;
   }
@@ -153,7 +151,63 @@ img {
   background-color: rgb(0, 0, 0);
 }
 
+@media(max-width: 800px) {
+  #navbar {
+    padding-top: 5px;
+  }
+
+  .nav-list {
+    margin: 0 .1rem;
+    float: inline-end;
+  }
+}
+
+.nav-list a {
+  display: block;
+  font-size: 1.55rem;
+  padding: 1rem;
+  text-shadow: 1px 1px ;
+}
+
+.nav-list a:hover {
+  transform:scaleY(1.5);
+  transform: translateX(-8px);
+  background-color: rgb(0, 0, 0);
+}
+
 /* Welcome section */
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  /* background: linear-gradient(90deg, rgba(79,103,164,1) 0%, rgba(0,173,162,1) 30%, rgba(79,103,164,1) 100%); */
+}
+
+@media(max-width: 800px) {
+  .welcome-section, #sub-intro{
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  height: 150px;
+  }
+}
+
+@media(max-width: 800px) {
+  .selfie{
+  max-width: 100%;
+  text-align: center;
+  padding: 0;
+  height: 150px;
+  padding: 10px;
+  display: inline;
+  
+  }
+}
 
 .welcome-section {
   display: flex;
@@ -170,7 +224,7 @@ img {
   font-size: 3rem;
   font-weight: 200;
   font-style: italic;
-  color: var(--main-white);
+  color: #ffffff;
 }
 
 #intro-name {
@@ -184,12 +238,20 @@ img {
   left: 120px;
 }
 
+/* Fixes positioning for mobile view */
+@media(max-width: 800px) {
+  .welcome-section, #sub-intro {
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 0;
+}
+  
+}
+
 .selfie {
   border-radius: 20px;
-  border-right: 3px solid blue;
-  border-top: 3px solid white;
-  border-left: 3px solid green;
-  border-bottom: 2px solid ;
+
 
 }
 
@@ -201,10 +263,10 @@ img {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100%;
+  max-width: 100%;
   height: 80vh;
   padding: 0 2rem;
-  background: var(--main-gray);
+  background-color: rgb(82, 162, 165);
 }
 
 /* Projects section */
@@ -218,7 +280,7 @@ img {
 .projects-section-header {
   max-width: 640px;
   margin: 0 auto 6rem auto;
-  border-bottom: 0.2rem solid var(--main-white);
+  border-bottom: 0.2rem solid #ffffff;
 }
 
 @media (max-width: 28.75em) {
@@ -249,13 +311,13 @@ img {
 }
 
 .project {
-  background: var(--main-gray);
+  background: #ff7f50;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
 }
 
 .code {
-  color: var(--main-gray);
+  color: #ff7f50;
   transition: color 0.3s ease-out;
 }
 
@@ -282,12 +344,12 @@ img {
 
 .btn-show-all {
   font-size: 2rem;
-  background: var(--main-gray);
+  background: #ff7f50;
   transition: background 0.3s ease-out;
 }
 
 .btn-show-all:hover {
-  background: var(--main-red);
+  background-color: rgb(163, 13, 13);
 }
 
 .btn-show-all:hover > i {
