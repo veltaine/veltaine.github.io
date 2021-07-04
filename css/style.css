@@ -45,7 +45,7 @@ html {
     font-size: 200%;
   }
   .selfie {
-    width: auto;
+    width: 100%;
   }
 }
 
@@ -104,16 +104,9 @@ img {
 
 /* nav */
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(90deg, rgba(0,23,133,1) 0%, rgba(15,121,9,1) 51%, rgba(0,23,133,1) 100%);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
-  z-index: 10;
+/* Flex-Direction for when you want to CENTER your nav! */
+#navbar {
+  flex-direction: column;
 }
 
 .nav-list {
@@ -126,11 +119,10 @@ img {
   justify-content: flex-start;
 }
 
-
-
 @media(max-width: 28.75em) {
   .nav {
     justify-content: center;
+
   }
 
   .nav-list {
@@ -142,7 +134,7 @@ img {
   display: block;
   font-size: 2.2rem;
   padding: 2rem;
-  text-shadow: 1px 1px ;
+  text-shadow: 1px 1px #077523;
 }
 
 .nav-list a:hover {
@@ -163,11 +155,14 @@ img {
   }
 }
 
+@media (max-width: 980px) {
 .nav-list a {
   display: block;
-  font-size: 1.55rem;
-  padding: 1rem;
-  text-shadow: 1px 1px ;
+  font-size: 2.7rem;
+  padding: 2rem;
+  border: 1px solid white;
+  border-radius: 20%;
+  }
 }
 
 .nav-list a:hover {
@@ -252,7 +247,8 @@ img {
 
 .selfie {
   border-radius: 20px;
-
+  max-width: 75%;
+  margin: auto;
 
 }
 
