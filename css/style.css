@@ -77,7 +77,7 @@ h1,
 h2 {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  text-align: center;
+  /* text-align: center; */
 }
 
 h1 {
@@ -97,10 +97,6 @@ a {
   color: #ffffff;
 }
 
-img {
-  display: block;
-  width: 100%;
-}
 
 /* nav */
 
@@ -133,21 +129,20 @@ img {
 .nav-list a {
   display: block;
   font-size: 2.2rem;
-  padding: 2rem;
+  padding: 1rem;
   text-shadow: 1px 1px #077523;
 }
 
-.nav-list a:hover {
+/* .nav-list a:hover {
   transform:scaleY(1.5);
   transform: translateX(-8px);
-  background-color: rgb(0, 0, 0);
-}
+  background-color: #ffffff;
+} */
 
 @media(max-width: 800px) {
   #navbar {
     padding-top: 5px;
   }
-
 
   .nav-list {
     margin: 0 .1rem;
@@ -165,11 +160,12 @@ img {
   }
 }
 
-.nav-list a:hover {
+/* .nav-list a:hover {
   transform:scaleY(1.5);
   transform: translateX(-8px);
-  background-color: rgb(0, 0, 0);
-}
+  color: aqua;
+  background-color: #6d6d6d;
+} */
 
 /* Welcome section */
 
@@ -195,11 +191,8 @@ img {
 
 @media(max-width: 800px) {
   .selfie{
-  max-width: 100%;
   text-align: center;
   padding: 0;
-  height: 150px;
-  padding: 10px;
   display: inline;
   
   }
@@ -223,16 +216,6 @@ img {
   color: #ffffff;
 }
 
-#intro-name {
-  top: 100px;
-  left: 0;
-}
-
-#sub-intro {
-  position: relative;
-  top: 100px;
-  left: 120px;
-}
 
 /* Fixes positioning for mobile view */
 @media(max-width: 800px) {
@@ -246,8 +229,12 @@ img {
 }
 
 .selfie {
+  object-fit: contain;
   border-radius: 20px;
-  max-width: 75%;
+  width: 50%;
+  height: 50%;
+  max-width: 100%;
+  max-height: 100%;
   margin: auto;
 
 }
