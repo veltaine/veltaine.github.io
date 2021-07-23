@@ -178,7 +178,7 @@ a:hover {
   width: 100%;
   text-align: center;
   padding: 0;
-
+  height: 150px;
   }
 }
 
@@ -224,21 +224,15 @@ a:hover {
   
 }
 
-.col > .selfie {
+.selfie {
   object-fit: contain;
   border-radius: 20px;
-  width: auto;
-  height: auto;
-  max-width: auto;
-  max-height: 300px;
+  width: 50%;
+  height: 50%;
+  max-width: 100%;
+  max-height: 100%;
   margin: auto;
 
-}
-
-@media(min-width: 801px) {
-  .col > .selfie {
-    left: 40rem;
-  }
 }
 
 /* About Me Section */
@@ -254,7 +248,6 @@ a:hover {
   padding: 0 2rem;
   background-color: #fff;
 }
-
 
 
 /* Projects section */
@@ -291,14 +284,14 @@ a:hover {
 .box {
   width: 100%;
   position: relative;
-  background: -webkit-linear-gradient(top, #888 0%,#ffffff 70%);
+  background: -webkit-linear-gradient(top, #888 0%,rgb(0, 0, 0) 30%);
   box-shadow: 3px 3px 5px #666;
   margin: 1rem;
   padding: 12px;
 }
 .box > h2{
 
-  background: #fff;
+  background: rgb(81, 106, 252);
   float: left;
   padding: 8px 16px;
   position: relative;
@@ -323,14 +316,14 @@ a:hover {
 .box {
   width: 100%;
   position: relative;
-  background: -webkit-linear-gradient(top, #888 0%,#ffffff 70%);
+  background: -webkit-linear-gradient(top, #888 0%,rgb(0, 0, 0) 30%);
   box-shadow: 3px 3px 5px #077523;
   margin: 1rem;
   padding: 12px;
 }
 .box > h2 {
 
-  background: #fff;
+  background: #ccc;
   float: left;
   padding: 8px 16px;
   position: relative;
